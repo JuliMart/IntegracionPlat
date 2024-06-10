@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API REST Cliente</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Clientes</h1>
+    <button onclick="obtenerClientes()">Load Clientes</button>
+    <table id="clientes-table">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Email</th>
+        </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</div>
+<div class="container">
+    <h1>Productos</h1>
+    <button onclick="obtenerProductos()">Load Productos</button>
+    <table id="productos-table">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Artículo</th>
+            <th>Descripción</th>
+            <th>Marca</th>
+        </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</div>
+<div class="container">
+    <h1>Deliverys</h1>
+    <button onclick="obtenerDeliverys()">Load Deliverys</button>
+    <table id="deliverys-table">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Direccion</th>
+            <th>Comuna</th>
+            <th>Region</th>
+        </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
