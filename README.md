@@ -60,9 +60,7 @@ El sistema en cuestión es un software con características clave que deben ser 
 ### Definiciones de Términos Técnicos
 - Definición de los términos técnicos utilizados en el documento para facilitar la comprensión.
 
----
 
-**Nota:** Es fundamental que el sistema sea sometido a, como mínimo, dos tipos de pruebas automatizadas utilizando herramientas como Selenium, JMeter, Postman, entre otras. Esto garantizará los atributos de calidad e integraciones necesarias para que el sitio pueda ser entregado en producción.
 
 
 
