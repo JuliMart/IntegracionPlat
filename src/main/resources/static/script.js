@@ -1,3 +1,11 @@
+function mostrarSeccion(seccionId) {
+    const secciones = document.querySelectorAll('.container');
+    secciones.forEach(seccion => {
+        seccion.style.display = 'none';
+    });
+    document.getElementById(seccionId).style.display = 'block';
+}
+
 // Manejo de Clientes
 document.getElementById('cliente-form').addEventListener('submit', async function(event) {
     event.preventDefault();
