@@ -1,3 +1,15 @@
+function mostrarSeccion(seccionId) {
+    const secciones = document.querySelectorAll('.container');
+    secciones.forEach(seccion => {
+        seccion.style.display = 'none';
+    });
+    document.getElementById(seccionId).style.display = 'block';
+}
+
+function redirigirALogin() {
+    window.location.href = '/login.html'; // Cambia esta URL por la URL de tu página de login
+}
+
 // Manejo de Clientes
 document.getElementById('cliente-form').addEventListener('submit', async function(event) {
     event.preventDefault();
@@ -324,3 +336,26 @@ async function actualizarDelivery(delivery) {
         }
     }
 }
+
+// Obtener y llenar el selector de comunas
+async function obtenerComunas() {
+    try {
+        const response = await fetch('URL_DE_TU_API_DE_COMUNAS'); // Reemplaza con la URL de tu API de comunas
+        if (!response.ok) {
+            throw new Error('Network response was not ok ' + response.statusText);
+        }
+        const comunas = await response.json();
+        const comunaSelect = document.getElementById('delivery-comuna');
+        comunas.forEach(comuna => {
+            const option = document.createElement('option');
+            option.value = comuna.id; // Asume que la comuna tiene un campo id
+            option.textContent = comuna.nombre; // Asume que la comuna tiene un campo nombre
+            comunaSelect.appendChild(option);
+        });
+    } catch (error) {
+        console.error('There has been a problem with your fetch operation:', error);
+    }
+}
+
+// Llamar a obtenerComunas cuando se carga la página
+document.addEventListener('DOMContentLoaded', obtenerComunas);
