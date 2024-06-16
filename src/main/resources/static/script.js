@@ -11,7 +11,7 @@ function redirigirALogin() {
 }
 
 // Manejo de Clientes
-document.getElementById('cliente-form').addEventListener('submit', async function(event) {
+document.getElementById('cliente-form').addEventListener('submit', async function (event) {
     event.preventDefault();
     const nombre = document.getElementById('cliente-nombre').value;
     const apellido = document.getElementById('cliente-apellido').value;
@@ -120,7 +120,7 @@ async function actualizarCliente(cliente) {
 }
 
 // Manejo de Productos
-document.getElementById('producto-form').addEventListener('submit', async function(event) {
+document.getElementById('producto-form').addEventListener('submit', async function (event) {
     event.preventDefault();
     const articulo = document.getElementById('producto-articulo').value;
     const descripcion = document.getElementById('producto-descripcion').value;
@@ -229,7 +229,7 @@ async function actualizarProducto(producto) {
 }
 
 // Manejo de Deliverys
-document.getElementById('delivery-form').addEventListener('submit', async function(event) {
+document.getElementById('delivery-form').addEventListener('submit', async function (event) {
     event.preventDefault();
     const direccion = document.getElementById('delivery-direccion').value;
     const comuna = document.getElementById('delivery-comuna').value;
@@ -340,7 +340,7 @@ async function actualizarDelivery(delivery) {
 // Obtener y llenar el selector de comunas
 async function obtenerComunas() {
     try {
-        const response = await fetch('URL_DE_TU_API_DE_COMUNAS'); // Reemplaza con la URL de tu API de comunas
+        const response = await fetch('https://apis.modernizacion.cl/dpa/comunas'); // Reemplaza con la URL de tu API de comunas
         if (!response.ok) {
             throw new Error('Network response was not ok ' + response.statusText);
         }
