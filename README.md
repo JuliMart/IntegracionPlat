@@ -23,16 +23,15 @@ El sistema en cuestión es un software con características clave que deben ser 
 - Definir qué se espera lograr con cada prueba realizada.
 
 ### Tipos de Pruebas a Realizar
-- Pruebas funcionales
-- Pruebas de integración
-- Pruebas de rendimiento
-- Pruebas de usabilidad
+- Clientes
+- Productos
+- Delivery
 
 ### Técnicas de Pruebas Aplicadas
-- Métodos y estrategias que se utilizarán durante el proceso de pruebas.
+- Pruebas unitarias: validacion de cada funcion del sistema opere conforme a los requisitos especificos.
 
 ### Definición de Roles y Responsabilidades
-- Asignación de roles y responsabilidades dentro del equipo de pruebas.
+- Ingenerio de Pruebas: Realiza las pruebas segun lo planificado
 
 ## Entorno y Configuración de las Pruebas
 
@@ -52,13 +51,13 @@ El sistema en cuestión es un software con características clave que deben ser 
 ## Condiciones para el Cierre del Proyecto
 
 ### Criterios de Aceptación
-- Criterios específicos de aceptación para finalizar las pruebas.
-- Márgenes de tolerancia para defectos aceptables.
+- Usabiilidad Aceptada: El sistema debe de ser facil de usar por los usuario finales
 
 ## Glosario
 
 ### Definiciones de Términos Técnicos
-- Definición de los términos técnicos utilizados en el documento para facilitar la comprensión.
+- Defectos Menores: Fallos que afecten de manera minima la funcionalidad o la apariencia del sistema
+- Pruebas de Regresion: Pruebas realizadas para segurar que cambios recientes no afecten las funcionalidades existentes.
 
 
 
