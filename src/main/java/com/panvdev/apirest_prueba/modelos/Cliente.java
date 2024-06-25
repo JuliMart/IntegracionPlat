@@ -10,54 +10,60 @@ import javax.persistence.Id;
 @Entity
 public class Cliente implements Serializable {
 
-	private static final long serialVersionUID = 1L;
-	
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long id;
-	
-	private String nombre;
-	private String apellido;
-	private String email;
-	
-	public Cliente() {
-		
-	}
+    private static final long serialVersionUID = 1L;
 
-	public long getId() {
-		return id;
-	}
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
 
-	public void setId(long id) {
-		this.id = id;
-	}
+    private String nombre;
+    private String apellido;
+    private String email;
 
-	public String getNombre() {
-		return nombre;
-	}
+    public Cliente() {
 
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
-	}
+    }
 
-	public String getApellido() {
-		return apellido;
-	}
+    public Cliente(String nombre, String apellido, String email) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.email = email;
+    }
 
-	public void setApellido(String apellido) {
-		this.apellido = apellido;
-	}
+    public long getId() {
+        return id;
+    }
 
-	public String getEmail() {
-		return email;
-	}
+    public void setId(long id) {
+        this.id = id;
+    }
 
-	public void setEmail(String email) {
-		this.email = email;
-	}
+    public String getNombre() {
+        return nombre;
+    }
 
-	public static long getSerialversionuid() {
-		return serialVersionUID;
-	}
-	
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getApellido() {
+        return apellido;
+    }
+
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public static long getSerialversionuid() {
+        return serialVersionUID;
+    }
+
 }
