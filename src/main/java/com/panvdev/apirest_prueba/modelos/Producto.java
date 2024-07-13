@@ -19,7 +19,8 @@ public class Producto implements Serializable {
     private String articulo;
     private String marca;
     private String descripcion;
-
+    private Double precio;
+    
     public Producto() {
 
     }
@@ -59,5 +60,12 @@ public class Producto implements Serializable {
     public static long getSerialversionuid() {
         return serialVersionUID;
     }
+ 
+    public Double getPrecio() {
+        return precio;
+    }
 
+    public void setPrecio(Double precio) {
+        this.precio = precio;
+    }
 }

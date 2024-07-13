@@ -125,8 +125,10 @@ document.getElementById('producto-form').addEventListener('submit', async functi
     const articulo = document.getElementById('producto-articulo').value;
     const descripcion = document.getElementById('producto-descripcion').value;
     const marca = document.getElementById('producto-marca').value;
+    const precio = document.getElementById('producto-precio').value;
 
-    await agregarProducto({ articulo, descripcion, marca });
+
+    await agregarProducto({ articulo, descripcion, marca, precio });
     obtenerProductos();
 });
 
@@ -170,12 +172,14 @@ function displayProductos(productos) {
         const cellArticulo = row.insertCell(1);
         const cellDescripcion = row.insertCell(2);
         const cellMarca = row.insertCell(3);
-        const cellAcciones = row.insertCell(4);
+        const cellPrecio = row.insertCell(4);
+        const cellAcciones = row.insertCell(5);
 
         cellId.textContent = producto.id;
         cellArticulo.textContent = producto.articulo;
         cellDescripcion.textContent = producto.descripcion;
         cellMarca.textContent = producto.marca;
+        cellPrecio.textContent = producto.precio;
 
         const btnEliminar = document.createElement('button');
         btnEliminar.textContent = 'Eliminar';
@@ -209,6 +213,8 @@ async function actualizarProducto(producto) {
     const descripcion = prompt("Actualizar descripción", producto.descripcion);
     const marca = prompt("Actualizar marca", producto.marca);
 
+    const precio = prompt("Actualizar precio", producto.precio);
+
     if (articulo && descripcion && marca) {
         try {
             const response = await fetch(`http://localhost:8080/producto/producto/${producto.id}`, {
@@ -216,7 +222,7 @@ async function actualizarProducto(producto) {
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({ articulo, descripcion, marca })
+                body: JSON.stringify({ articulo, descripcion, marca, precio })
             });
             if (!response.ok) {
                 throw new Error('Error al actualizar producto');
