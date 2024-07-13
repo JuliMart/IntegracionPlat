@@ -50,6 +50,8 @@ public class ProductoControlador {
         productoPorId.setArticulo(producto.getArticulo());
         productoPorId.setMarca(producto.getMarca());
         productoPorId.setDescripcion(producto.getDescripcion());
+        productoPorId.setPrecio(producto.getPrecio());
+
 
         Producto producto_actualizado = productoservicio.guardar(productoPorId);
         return new ResponseEntity<>(producto_actualizado, HttpStatus.CREATED);

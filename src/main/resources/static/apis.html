@@ -1,81 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>API REST Cliente</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-<div class="container">
-    <h1>Clientes</h1>
-    <form id="cliente-form">
-        <input type="text" id="cliente-nombre" placeholder="Nombre" required>
-        <input type="text" id="cliente-apellido" placeholder="Apellido" required>
-        <input type="email" id="cliente-email" placeholder="Email" required>
-        <button type="submit">Agregar Cliente</button>
-    </form>
-    <button onclick="obtenerClientes()">Load Clientes</button>
-    <table id="clientes-table">
-        <thead>
-        <tr>
-            <th>ID</th>
-            <th>Nombre</th>
-            <th>Apellido</th>
-            <th>Email</th>
-            <th>Acciones</th>
-        </tr>
-        </thead>
-        <tbody>
-        </tbody>
-    </table>
-</div>
-<div class="container">
-    <h1>Productos</h1>
-    <form id="producto-form">
-        <input type="text" id="producto-articulo" placeholder="Artículo" required>
-        <input type="text" id="producto-descripcion" placeholder="Descripción" required>
-        <input type="text" id="producto-marca" placeholder="Marca" required>
-        <button type="submit">Agregar Producto</button>
-    </form>
-    <button onclick="obtenerProductos()">Load Productos</button>
-    <table id="productos-table">
-        <thead>
-        <tr>
-            <th>ID</th>
-            <th>Artículo</th>
-            <th>Descripción</th>
-            <th>Marca</th>
-            <th>Acciones</th>
-        </tr>
-        </thead>
-        <tbody>
-        </tbody>
-    </table>
-</div>
-<div class="container">
-    <h1>Deliverys</h1>
-    <form id="delivery-form">
-        <input type="text" id="delivery-direccion" placeholder="Dirección" required>
-        <input type="text" id="delivery-comuna" placeholder="Comuna" required>
-        <input type="text" id="delivery-region" placeholder="Región" required>
-        <button type="submit">Agregar Delivery</button>
-    </form>
-    <button onclick="obtenerDeliverys()">Load Deliverys</button>
-    <table id="deliverys-table">
-        <thead>
-        <tr>
-            <th>ID</th>
-            <th>Direccion</th>
-            <th>Comuna</th>
-            <th>Region</th>
-            <th>Acciones</th>
-        </tr>
-        </thead>
-        <tbody>
-        </tbody>
-    </table>
-</div>
-<script src="script.js"></script>
+    <div class="container">
+        <h1>Clientes</h1>
+        <form id="cliente-form">
+            <input type="text" id="cliente-nombre" placeholder="Nombre" required>
+            <input type="text" id="cliente-apellido" placeholder="Apellido" required>
+            <input type="email" id="cliente-email" placeholder="Email" required>
+            <button type="submit">Agregar Cliente</button>
+        </form>
+        <button onclick="obtenerClientes()">Load Clientes</button>
+        <table id="clientes-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Email</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    <div class="container">
+        <h1>Productos</h1>
+        <form id="producto-form">
+            <input type="text" id="producto-articulo" placeholder="Artículo" required>
+            <input type="text" id="producto-descripcion" placeholder="Descripción" required>
+            <input type="text" id="producto-marca" placeholder="Marca" required>
+            <input type="number" id="producto-precio" placeholder="Precio" required>
+
+            <button type="submit">Agregar Producto</button>
+        </form>
+        <button onclick="obtenerProductos()">Load Productos</button>
+        <table id="productos-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Artículo</th>
+                    <th>Descripción</th>
+                    <th>Marca</th>
+                    <th>Precio</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    <div class="container">
+        <h1>Deliverys</h1>
+        <form id="delivery-form">
+            <input type="text" id="delivery-direccion" placeholder="Dirección" required>
+            <input type="text" id="delivery-comuna" placeholder="Comuna" required>
+            <input type="text" id="delivery-region" placeholder="Región" required>
+            <button type="submit">Agregar Delivery</button>
+        </form>
+        <button onclick="obtenerDeliverys()">Load Deliverys</button>
+        <table id="deliverys-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Direccion</th>
+                    <th>Comuna</th>
+                    <th>Region</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    <script src="script.js"></script>
 </body>
+
 </html>

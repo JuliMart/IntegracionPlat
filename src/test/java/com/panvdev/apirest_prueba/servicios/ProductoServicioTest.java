@@ -36,6 +36,7 @@ public class ProductoServicioTest {
         producto.setArticulo("Laptop");
         producto.setMarca("Dell");
         producto.setDescripcion("Laptop Dell Inspiron");
+        producto.setPrecio(39.990);
 
         when(productoRepositorio.save(producto)).thenReturn(producto);
         assertEquals(producto, productoServicio.guardar(producto));
