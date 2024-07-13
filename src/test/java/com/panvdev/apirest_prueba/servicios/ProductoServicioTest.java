@@ -1,15 +1,14 @@
 package com.panvdev.apirest_prueba.servicios;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.mockito.Mockito.when;
-
 import java.util.Arrays;
 import java.util.List;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
+import static org.mockito.Mockito.when;
 import org.mockito.MockitoAnnotations;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -33,9 +32,9 @@ public class ProductoServicioTest {
     @Test
     public void testGuardarProducto() {
         Producto producto = new Producto();
-        producto.setArticulo("Laptop");
-        producto.setMarca("Dell");
-        producto.setDescripcion("Laptop Dell Inspiron");
+        producto.setArticulo("Sierra");
+        producto.setMarca("Dewalt");
+        producto.setDescripcion("Sierra de banco");
         producto.setPrecio(39.990);
 
         when(productoRepositorio.save(producto)).thenReturn(producto);
@@ -52,9 +51,9 @@ public class ProductoServicioTest {
     @Test
     public void testObtenerProductoPorId() {
         Producto producto = new Producto();
-        producto.setArticulo("Laptop");
-        producto.setMarca("Dell");
-        producto.setDescripcion("Laptop Dell Inspiron");
+        producto.setArticulo("Sierra");
+        producto.setMarca("Dewalt");
+        producto.setDescripcion("Sierra de banco");
 
         when(productoRepositorio.findById(1L)).thenReturn(java.util.Optional.of(producto));
         assertEquals(producto, productoServicio.obtenerPorId(1L));
